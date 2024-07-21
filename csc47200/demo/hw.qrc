@@ -1,0 +1,27 @@
+<RCC>
+    <qresource prefix="/">
+        <file>mandrill.jpg</file>
+        <file>fshaderThreshold.glsl</file>
+        <file>vshaderThreshold.glsl</file>
+        <file>fshaderBtct.glsl</file>
+        <file>vshaderBtct.glsl</file>
+        <file>fshaderGamma.glsl</file>
+        <file>vshaderGamma.glsl</file>
+        <file>fshaderQuant.glsl</file>
+        <file>vshaderQuant.glsl</file>
+        <file>fshaderHistogramStrech.glsl</file>
+        <file>vshaderHistogramStrech.glsl</file>
+        <file>fshaderBlur.glsl</file>
+        <file>vshaderBlur.glsl</file>
+        <file>fshaderSharpen.glsl</file>
+        <file>vshaderSharpen.glsl</file>
+        <file>maddot.pgm</file>
+        <file>fshaderMedian.glsl</file>
+        <file>vshaderMedian.glsl</file>
+        <file>fshaderConvolution.glsl</file>
+        <file>vshaderConvolution.glsl</file>
+        <file>fshaderCorrelation.glsl</file>
+        <file>vshaderCorrelation.glsl</file>
+        <file>template.jpg</file>
+    </qresource>
+</RCC>
