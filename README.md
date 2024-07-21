@@ -6,3 +6,4 @@ Computer Engineering Courses for Undergrad at CCNY
 - CSC36600
 - CSC22100
 - CSC47200
+- CSC47000
