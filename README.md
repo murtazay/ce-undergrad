@@ -7,3 +7,4 @@ Computer Engineering Courses for Undergrad at CCNY
 - CSC22100
 - CSC47200
 - CSC47000
+- EE 45700

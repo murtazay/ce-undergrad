@@ -1,0 +1,190 @@
+*** SPICE deck for cell enigma4{lay} from library enigmaLayout
+*** Created on Sun Dec 18, 2016 12:54:48
+*** Last revised on Sun Dec 18, 2016 16:02:00
+*** Written on Sun Dec 18, 2016 16:11:56 by Electric VLSI Design System, version 9.06
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+*CMOS/BULK-NWELL (PRELIMINARY PARAMETERS)
+
+*** SUBCIRCUIT enigmaLayout__OR3 FROM CELL OR3{lay}
+.SUBCKT enigmaLayout__OR3 gnd In1 In2 In3 Out vdd
+Mnmos@1 gnd In2 net@15 gnd N L=0.7U W=1.4U AS=7.044P AD=35.617P PS=10.456U PD=28.35U
+Mnmos@2 net@15 In1 gnd gnd N L=0.7U W=1.4U AS=35.617P AD=7.044P PS=28.35U PD=10.456U
+Mnmos@3 net@15 In3 gnd gnd N L=0.7U W=1.4U AS=35.617P AD=7.044P PS=28.35U PD=10.456U
+Mnmos@4 Out net@15 gnd gnd N L=0.7U W=1.4U AS=35.617P AD=7.901P PS=28.35U PD=11.462U
+Mpmos@1 net@113 In2 net@112 vdd P L=0.7U W=2.8U AS=10.045P AD=10.045P PS=9.975U PD=9.975U
+Mpmos@2 net@112 In1 vdd vdd P L=0.7U W=2.8U AS=73.255P AD=10.045P PS=52.675U PD=9.975U
+Mpmos@3 net@15 In3 net@113 vdd P L=0.7U W=2.8U AS=10.045P AD=7.044P PS=9.975U PD=10.456U
+Mpmos@5 Out net@15 vdd vdd P L=0.7U W=2.8U AS=73.255P AD=7.901P PS=52.675U PD=11.462U
+.ENDS enigmaLayout__OR3
+
+*** SUBCIRCUIT enigmaLayout__AND8 FROM CELL AND8{lay}
+.SUBCKT enigmaLayout__AND8 gnd In1 In2 In3 In4 In5 In6 In7 In8 Out vdd
+Mnmos@0 net@49 In1 net@7 gnd N L=0.7U W=1.4U AS=9.841P AD=4.41P PS=10.85U PD=7.7U
+Mnmos@1 net@50 In3 net@31 gnd N L=0.7U W=1.4U AS=4.41P AD=4.41P PS=7.7U PD=7.7U
+Mnmos@2 net@31 In2 net@49 gnd N L=0.7U W=1.4U AS=4.41P AD=4.41P PS=7.7U PD=7.7U
+Mnmos@3 net@51 In4 net@50 gnd N L=0.7U W=1.4U AS=4.41P AD=3.92P PS=7.7U PD=7U
+Mnmos@4 net@52 In5 net@51 gnd N L=0.7U W=1.4U AS=3.92P AD=4.41P PS=7U PD=7.7U
+Mnmos@5 net@53 In7 net@39 gnd N L=0.7U W=1.4U AS=4.41P AD=4.41P PS=7.7U PD=7.7U
+Mnmos@6 net@39 In6 net@52 gnd N L=0.7U W=1.4U AS=4.41P AD=4.41P PS=7.7U PD=7.7U
+Mnmos@7 gnd In8 net@53 gnd N L=0.7U W=1.4U AS=4.41P AD=121.397P PS=7.7U PD=79.8U
+Mnmos@8 Out net@7 gnd gnd N L=0.7U W=1.4U AS=121.397P AD=7.901P PS=79.8U PD=11.462U
+Mpmos@0 vdd In1 net@7 vdd P L=0.7U W=2.8U AS=9.841P AD=35.906P PS=10.85U PD=25.842U
+Mpmos@1 vdd In3 net@7 vdd P L=0.7U W=2.8U AS=9.841P AD=35.906P PS=10.85U PD=25.842U
+Mpmos@2 net@7 In2 vdd vdd P L=0.7U W=2.8U AS=35.906P AD=9.841P PS=25.842U PD=10.85U
+Mpmos@3 net@7 In4 vdd vdd P L=0.7U W=2.8U AS=35.906P AD=9.841P PS=25.842U PD=10.85U
+Mpmos@4 vdd In5 net@7 vdd P L=0.7U W=2.8U AS=9.841P AD=35.906P PS=10.85U PD=25.842U
+Mpmos@5 vdd In7 net@7 vdd P L=0.7U W=2.8U AS=9.841P AD=35.906P PS=10.85U PD=25.842U
+Mpmos@6 net@7 In6 vdd vdd P L=0.7U W=2.8U AS=35.906P AD=9.841P PS=25.842U PD=10.85U
+Mpmos@7 net@7 In8 vdd vdd P L=0.7U W=2.8U AS=35.906P AD=9.841P PS=25.842U PD=10.85U
+Mpmos@8 Out net@7 vdd vdd P L=0.7U W=2.8U AS=35.906P AD=7.901P PS=25.842U PD=11.462U
+.ENDS enigmaLayout__AND8
+
+*** SUBCIRCUIT enigmaLayout__XNOR FROM CELL XNOR{lay}
+.SUBCKT enigmaLayout__XNOR gnd In1 In2 Out vdd
+Mnmos@0 net@180 In1 Out gnd N L=0.7U W=1.4U AS=7.779P AD=4.41P PS=10.237U PD=7.7U
+Mnmos@1 net@181 In2 gnd gnd N L=0.7U W=1.4U AS=46.611P AD=4.41P PS=32.9U PD=7.7U
+Mnmos@2 gnd net@37 net@180 gnd N L=0.7U W=1.4U AS=4.41P AD=46.611P PS=7.7U PD=32.9U
+Mnmos@3 Out net@30 net@181 gnd N L=0.7U W=1.4U AS=4.41P AD=7.779P PS=7.7U PD=10.237U
+Mnmos@4 net@37 In2 gnd gnd N L=0.7U W=1.4U AS=46.611P AD=9.371P PS=32.9U PD=12.862U
+Mnmos@5 gnd In1 net@30 gnd N L=0.7U W=1.4U AS=9.371P AD=46.611P PS=12.862U PD=32.9U
+Mpmos@0 vdd In1 net@69 vdd P L=0.7U W=2.8U AS=11.27P AD=50.96P PS=12.25U PD=34.825U
+Mpmos@1 Out In2 net@69 vdd P L=0.7U W=2.8U AS=11.27P AD=7.779P PS=12.25U PD=10.237U
+Mpmos@2 net@69 net@37 vdd vdd P L=0.7U W=2.8U AS=50.96P AD=11.27P PS=34.825U PD=12.25U
+Mpmos@3 net@69 net@30 Out vdd P L=0.7U W=2.8U AS=7.779P AD=11.27P PS=10.237U PD=12.25U
+Mpmos@4 vdd In1 net@30 vdd P L=0.7U W=2.8U AS=9.371P AD=50.96P PS=12.862U PD=34.825U
+Mpmos@5 net@37 In2 vdd vdd P L=0.7U W=2.8U AS=50.96P AD=9.371P PS=34.825U PD=12.862U
+.ENDS enigmaLayout__XNOR
+
+*** SUBCIRCUIT enigmaLayout__register_compare FROM CELL register_compare{lay}
+.SUBCKT enigmaLayout__register_compare A1 A2 A3 A4 A5 A6 A7 A8 B1 B2 B3 B4 B5 B6 B7 B8 gnd Out vdd
+XNAND8@0 gnd net@73 net@62 net@52 net@46 net@40 net@33 net@29 net@21 Out vdd enigmaLayout__AND8
+XXOR@7 gnd A2 B2 net@29 vdd enigmaLayout__XNOR
+XXOR@20 gnd A1 B1 net@21 vdd enigmaLayout__XNOR
+XXOR@21 gnd A4 B4 net@40 vdd enigmaLayout__XNOR
+XXOR@22 gnd A3 B3 net@33 vdd enigmaLayout__XNOR
+XXOR@27 gnd A6 B6 net@52 vdd enigmaLayout__XNOR
+XXOR@28 gnd A5 B5 net@46 vdd enigmaLayout__XNOR
+XXOR@29 gnd A8 B8 net@73 vdd enigmaLayout__XNOR
+XXOR@30 gnd A7 B7 net@62 vdd enigmaLayout__XNOR
+.ENDS enigmaLayout__register_compare
+
+*** SUBCIRCUIT enigmaLayout__enigma_unit FROM CELL enigma_unit{lay}
+.SUBCKT enigmaLayout__enigma_unit gnd guess_A1 guess_A2 guess_A3 guess_A4 guess_A5 guess_A6 guess_A7 guess_A8 key_A1 key_A2 key_A3 key_A4 key_A5 key_A6 key_A7 key_A8 key_B1 key_B2 key_B3 key_B4 key_B5 key_B6 key_B7 key_B8 key_C1 key_C2 key_C3 key_C4 key_C5 key_C6 key_C7 key_C8 key_D1 key_D2 key_D3 key_D4 key_D5 key_D6 key_D7 key_D8 match_1 place_1 vdd
+XOR3@0 gnd net@424 net@52 net@61 match_1 vdd enigmaLayout__OR3
+Xregister@1 guess_A1 guess_A2 guess_A3 guess_A4 guess_A5 guess_A6 guess_A7 guess_A8 key_B1 key_B2 key_B3 key_B4 key_B5 key_B6 key_B7 key_B8 gnd net@61 vdd enigmaLayout__register_compare
+Xregister@4 guess_A1 guess_A2 guess_A3 guess_A4 guess_A5 guess_A6 guess_A7 guess_A8 key_C1 key_C2 key_C3 key_C4 key_C5 key_C6 key_C7 key_C8 gnd net@52 vdd enigmaLayout__register_compare
+Xregister@5 guess_A1 guess_A2 guess_A3 guess_A4 guess_A5 guess_A6 guess_A7 guess_A8 key_D1 key_D2 key_D3 key_D4 key_D5 key_D6 key_D7 key_D8 gnd net@424 vdd enigmaLayout__register_compare
+Xregister@6 guess_A1 guess_A2 guess_A3 guess_A4 guess_A5 guess_A6 guess_A7 guess_A8 key_A1 key_A2 key_A3 key_A4 key_A5 key_A6 key_A7 key_A8 gnd place_1 vdd enigmaLayout__register_compare
+.ENDS enigmaLayout__enigma_unit
+
+*** TOP LEVEL CELL: enigma4{lay}
+Xenigma_u@0 gnd GUESS_A1 GUESS_A2 GUESS_A3 GUESS_A4 GUESS_A5 GUESS_A6 GUESS_A7 GUESS_A8 KEY_A1 KEY_A2 KEY_A3 KEY_A4 KEY_A5 KEY_A6 KEY_A7 KEY_A8 KEY_B1 KEY_B2 KEY_B3 KEY_B4 KEY_B5 KEY_B6 KEY_B7 KEY_B8 KEY_C1 KEY_C2 KEY_C3 KEY_C4 KEY_C5 KEY_C6 KEY_C7 KEY_C8 KEY_D1 KEY_D2 KEY_D3 KEY_D4 KEY_D5 KEY_D6 KEY_D7 KEY_D8 MATCH_1 PLACE_1 vdd enigmaLayout__enigma_unit
+Xenigma_u@1 gnd GUESS_B1 GUESS_B2 GUESS_B3 GUESS_B4 GUESS_B5 GUESS_B6 GUESS_B7 GUESS_B8 KEY_B1 KEY_B2 KEY_B3 KEY_B4 KEY_B5 KEY_B6 KEY_B7 KEY_B8 KEY_A1 KEY_A2 KEY_A3 KEY_A4 KEY_A5 KEY_A6 KEY_A7 KEY_A8 KEY_C1 KEY_C2 KEY_C3 KEY_C4 KEY_C5 KEY_C6 KEY_C7 KEY_C8 KEY_D1 KEY_D2 KEY_D3 KEY_D4 KEY_D5 KEY_D6 KEY_D7 KEY_D8 MATCH_2 PLACE_2 vdd enigmaLayout__enigma_unit
+Xenigma_u@2 gnd GUESS_C1 GUESS_C2 GUESS_C3 GUESS_C4 GUESS_C5 GUESS_C6 GUESS_C7 GUESS_C8 KEY_C1 KEY_C2 KEY_C3 KEY_C4 KEY_C5 KEY_C6 KEY_C7 KEY_C8 KEY_A1 KEY_A2 KEY_A3 KEY_A4 KEY_A5 KEY_A6 KEY_A7 KEY_A8 KEY_B1 KEY_B2 KEY_B3 KEY_B4 KEY_B5 KEY_B6 KEY_B7 KEY_B8 KEY_D1 KEY_D2 KEY_D3 KEY_D4 KEY_D5 KEY_D6 KEY_D7 KEY_D8 MATCH_3 PLACE_3 vdd enigmaLayout__enigma_unit
+Xenigma_u@3 gnd GUESS_D1 GUESS_D2 GUESS_D3 GUESS_D4 GUESS_D5 GUESS_D6 GUESS_D7 GUESS_D8 KEY_D1 KEY_D2 KEY_D3 KEY_D4 KEY_D5 KEY_D6 KEY_D7 KEY_D8 KEY_A1 KEY_A2 KEY_A3 KEY_A4 KEY_A5 KEY_A6 KEY_A7 KEY_A8 KEY_B1 KEY_B2 KEY_B3 KEY_B4 KEY_B5 KEY_B6 KEY_B7 KEY_B8 KEY_C1 KEY_C2 KEY_C3 KEY_C4 KEY_C5 KEY_C6 KEY_C7 KEY_C8 MATCH_4 PLACE_4 vdd enigmaLayout__enigma_unit
+
+*** Analysis
+VDD VDD 0 DC 3.3
+VGND GND DC 0
+VGUESS_A1 GUESS_A1 0 PULSE(0 3.3 400n 20n 40n 370n 4u)
+VGUESS_A2 GUESS_A2 0 DC 3.3
+VGUESS_A3 GUESS_A3 0 DC 3.3
+VGUESS_A4 GUESS_A4 0 DC 3.3
+VGUESS_A5 GUESS_A5 0 DC 3.3
+VGUESS_A6 GUESS_A6 0 DC 3.3
+VGUESS_A7 GUESS_A7 0 DC 3.3
+VGUESS_A8 GUESS_A8 0 DC 3.3
+
+VGUESS_B1 GUESS_B1 0 PULSE(0 3.3 400n 20n 40n 370n 4u)
+VGUESS_B2 GUESS_B2 0 DC 0
+VGUESS_B3 GUESS_B3 0 DC 0
+VGUESS_B4 GUESS_B4 0 DC 0
+VGUESS_B5 GUESS_B5 0 DC 0
+VGUESS_B6 GUESS_B6 0 DC 0
+VGUESS_B7 GUESS_B7 0 DC 3.3
+VGUESS_B8 GUESS_B8 0 DC 0
+
+VGUESS_C1 GUESS_C1 0 DC 3.3
+VGUESS_C2 GUESS_C2 0 DC 0
+VGUESS_C3 GUESS_C3 0 DC 0
+VGUESS_C4 GUESS_C4 0 DC 0
+VGUESS_C5 GUESS_C5 0 DC 0
+VGUESS_C6 GUESS_C6 0 DC 0
+VGUESS_C7 GUESS_C7 0 DC 0
+VGUESS_C8 GUESS_C8 0 DC 0
+
+VGUESS_D1 GUESS_D1 0 DC 0
+VGUESS_D2 GUESS_D2 0 DC 0
+VGUESS_D3 GUESS_D3 0 DC 0
+VGUESS_D4 GUESS_D4 0 DC 0
+VGUESS_D5 GUESS_D5 0 DC 0
+VGUESS_D6 GUESS_D6 0 DC 0
+VGUESS_D7 GUESS_D7 0 DC 0
+VGUESS_D8 GUESS_D8 0 DC 3.3
+
+VKEY_A1 KEY_A1 0 DC 3.3
+VKEY_A2 KEY_A2 0 DC 3.3
+VKEY_A3 KEY_A3 0 DC 3.3
+VKEY_A4 KEY_A4 0 DC 3.3
+VKEY_A5 KEY_A5 0 DC 3.3
+VKEY_A6 KEY_A6 0 DC 3.3
+VKEY_A7 KEY_A7 0 DC 3.3
+VKEY_A8 KEY_A8 0 DC 3.3
+
+VKEY_B1 KEY_B1 0 DC 3.3
+VKEY_B2 KEY_B2 0 DC 0
+VKEY_B3 KEY_B3 0 DC 0
+VKEY_B4 KEY_B4 0 DC 0
+VKEY_B5 KEY_B5 0 DC 0
+VKEY_B6 KEY_B6 0 DC 0
+VKEY_B7 KEY_B7 0 DC 0
+VKEY_B8 KEY_B8 0 DC 0
+
+VKEY_C1 KEY_C1 0 DC 3.3
+VKEY_C2 KEY_C2 0 DC 0
+VKEY_C3 KEY_C3 0 DC 0
+VKEY_C4 KEY_C4 0 DC 0
+VKEY_C5 KEY_C5 0 DC 0
+VKEY_C6 KEY_C6 0 DC 0
+VKEY_C7 KEY_C7 0 DC 3.3
+VKEY_C8 KEY_C8 0 DC 0
+
+VKEY_D1 KEY_D1 0 DC 0
+VKEY_D2 KEY_D2 0 DC 0
+VKEY_D3 KEY_D3 0 DC 0
+VKEY_D4 KEY_D4 0 DC 0
+VKEY_D5 KEY_D5 0 DC 0
+VKEY_D6 KEY_D6 0 DC 0
+VKEY_D7 KEY_D7 0 DC 0
+VKEY_D8 KEY_D8 0 DC 3.3
+
+.include C:\electric\MOS_model.txt
+.TRAN 0 1u
+
+*** Measurements for Python Code
+.measure tran place_1 param v(place_1)
+.measure tran place_2 param v(place_2)
+.measure tran place_3 param v(place_3)
+.measure tran place_4 param v(place_4)
+.measure tran match_1 param v(match_1)
+.measure tran match_2 param v(match_2)
+.measure tran match_3 param v(match_3)
+.measure tran match_4 param v(match_4)
+.save v(place_1) v(match_1) v(place_2) v(match_2) v(place_3) v(match_3) v(place_4) v(match_4)
+
+*** Measurements for report
+*.MEAS TRAN tdelay_place TRIG V(guess_a1) VAL=3 RISE=1
+*+                       TARG V(place_1) VAL=3 RISE=1
+*.MEAS TRAN tdelay_match TRIG V(guess_b1) VAL=3 RISE=1
+*+                       TARG V(match_2) VAL=3 RISE=1
+*.MEAS TRAN rise_place TRIG V(place_1) VAL=.1 RISE=1
+*+               TARG V(place_1) VAL=.9 RISE=1
+*.MEAS TRAN fall_place TRIG V(place_1) VAL=.9 FALL=1
+*+               TARG V(place_1) VAL=.1 FALL=1
+*.MEAS TRAN rise_match TRIG V(match_2) VAL=.1 RISE=1
+*+               TARG V(match_2) VAL=.9 RISE=1
+*.MEAS TRAN fall_match TRIG V(match_2) VAL=.9 FALL=1
+*+               TARG V(match_2) VAL=.1 FALL=1
+
+.END
